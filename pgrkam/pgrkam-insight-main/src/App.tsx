@@ -134,7 +134,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         {showSplash && <SplashBanner onClose={handleSplashClose} />}
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/jobs/:category" element={<JobListings />} />
